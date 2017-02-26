@@ -1,8 +1,12 @@
-// import App from './App';
-import FirstApp from './FirstApp';
+import React from 'react';
+import ReactDOM from 'react-dom'
+// import FirstApp from './FirstApp';
 import './index.css';
+import configureStore from './configureStore';
+import Root from './components/Root';
 
-// ReactDOM.render(
-//   <FirstApp />,
-//   document.getElementById('root')
-// );
+const store = configureStore();
+ReactDOM.render(
+  <Root store={store} />,
+  document.getElementById('root')
+);
